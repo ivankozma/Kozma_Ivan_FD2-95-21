@@ -18,7 +18,17 @@ while(true) {
 
 // цикл по отмене ввода фамилии (в этом случае null выдает)
 
-const patronymic = prompt("Ваше отчество?");
+let patronymic = prompt("Ваше отчество?");
+
+while(true) {
+    if (patronymic.length >= 2)
+        break;
+    patronymic = prompt("Отчество слишком короткое. Возможно вы вводите неверное значение. Попытайтесь снова");
+}
+
+// цикл по проверке количества символов в отчетстве
+
+
 
 let age = parseInt(prompt("Ваш возраст?"));
 
