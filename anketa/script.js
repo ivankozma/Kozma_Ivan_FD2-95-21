@@ -1,7 +1,35 @@
-const firstName = prompt("Ваше имя?");
-const lastName = prompt("Ваша фамилия?");
+let firstName = prompt("Ваше имя?");
+
+while(true) {
+    if (firstName !== "")
+        break;
+    firstName = prompt("Вы не указали свое имя! Введите пожалуйста свое имя");
+}
+
+// цикл по не пустой строке
+
+let lastName = prompt("Ваша фамилия?");
+
+while(true) {
+    if (lastName !== null)
+        break;
+    lastName = prompt("Вы отказались указывать фамилию! Необходимо ввести фамилию");
+}
+
+// цикл по отмене ввода фамилии (в этом случае null выдает)
+
 const patronymic = prompt("Ваше отчество?");
-const age = parseInt(prompt("Ваш возраст?"));
+
+let age = parseInt(prompt("Ваш возраст?"));
+
+while(true) {
+    if (!isNaN(age)) 
+        break;
+    age = prompt("Введите ваш возраст корректно");
+}
+
+// цикл по не числовому вводу возраст (f.e. буква введена)
+
 const ageInDay = age*365;
 const isMan = confirm("Ваш пол мужской?");
 let gender;
@@ -33,3 +61,7 @@ alert (`ваше ФИО: ${firstName} ${lastName} ${patronymic}
 через 5 лет вам будет: ${ageThroughTime}
 ваш пол: ${gender}
 вы на пенсии: ${pension}`);
+
+// интерполяция с использованием шаблонного литера 
+
+
