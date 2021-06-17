@@ -1,44 +1,33 @@
 let firstName = prompt("Ваше имя?");
 
-while(true) {
-    if (firstName !== "")
-        break;
+while(firstName === null || firstName === "") {
     firstName = prompt("Вы не указали свое имя! Введите пожалуйста свое имя");
 }
-
-// цикл по не пустой строке
+// цикл по отмене ввода и пустой строке
 
 let lastName = prompt("Ваша фамилия?");
 
-while(true) {
-    if (lastName !== null)
-        break;
-    lastName = prompt("Вы отказались указывать фамилию! Необходимо ввести фамилию");
+while(lastName === null || lastName === "") {
+    lastName = prompt("Вы не указали свою фамилию! Введите пожалуйста фамилию");
 }
-
-// цикл по отмене ввода фамилии (в этом случае null выдает)
+// цикл по отмене ввода фамилии (в этом случае null выдает) и по вводу пустой строки 
 
 let patronymic = prompt("Ваше отчество?");
 
-while(true) {
-    if (patronymic.length >= 2)
-        break;
+while(patronymic.length <= 2) {
     patronymic = prompt("Отчество слишком короткое. Возможно вы вводите неверное значение. Попытайтесь снова");
 }
-
 // цикл по проверке количества символов в отчетстве
 
 
 
 let age = parseInt(prompt("Ваш возраст?"));
 
-while(true) {
-    if (!isNaN(age)) 
-        break;
+while( isNaN(age) || age===null) {
     age = prompt("Введите ваш возраст корректно");
 }
 
-// цикл по не числовому вводу возраст (f.e. буква введена)
+// цикл по не числовому вводу возраст (f.e. буква введена) и отмене ввода
 
 const ageInDay = age*365;
 const isMan = confirm("Ваш пол мужской?");
