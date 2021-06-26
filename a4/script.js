@@ -1,6 +1,8 @@
-function isPolindrome() {
-    let word = prompt("Введите строку!");
-    word = word.match(/[A-Za-zА-Ща-щЭ-Яэ-я0-9]/gi).join("").toLowerCase();
+let word = prompt("Введите строку!");
+word = word.match(/[A-Za-zА-Ща-щЭ-Яэ-я0-9]/gi).join("").toLowerCase();
+
+function isPolindrome(word) {
+
 
     if(word.length < 2) return true;
 
@@ -10,4 +12,4 @@ function isPolindrome() {
 }
 
 
-console.log (isPolindrome());
+isPolindrome(word) ? alert("This is a polindrom") : alert("This isn't a polindrom");
