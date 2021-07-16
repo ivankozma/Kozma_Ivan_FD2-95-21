@@ -5,14 +5,19 @@ function randomDiap(n,m) {
 function mood(colorsCount) {
     let colors=['', 'red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
     let usedColors = {};
-    // console.log( `Number of colors is ${colorsCount}`);
-    for (let i=1; i<=colorsCount; i++ ) {
-    let n=randomDiap(1,7);
-    let colorName=colors[n];
-    if(colorName in usedColors)
-        continue;
-    usedColors[colorName]=true;
-    console.log(colorName);
+
+    console.log( `Number of colors is ${colorsCount}`);
+    for (let i=1; i<=colors.length; i++ ) {
+        let n=randomDiap(1,7);
+        let colorName=colors[n];
+        if(colorName in usedColors)
+            continue;
+        usedColors[colorName]=true;
+
+        if (Object.keys(usedColors).length > 3)
+            break;
+            
+        console.log(colorName);
     }
 }
 
