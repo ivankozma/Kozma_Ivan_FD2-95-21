@@ -1,27 +1,24 @@
 const phone = [
     {
       model: "Apple",
-      imgUrl:"aplle.jpg",
+      imgUrl:"apple.jpeg",
       color: "white",
-      descriptions: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam consequuntur quis velit aut facere exercitationem vel reprehenderit ab quibusdam possimus. Enim soluta qui itaque saepe, maiores doloremque aperiam dolorem a?",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam consequuntur quis velit aut facere exercitationem vel reprehenderit ab quibusdam possimus.?",
       price: 200,
-      sale: true
     },
     {
       model: "Samsung",
-      imgUrl:"samsung.jpg",
+      imgUrl:"samsung.jpeg",
       color: "red",
-      descriptions: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam consequuntur quis velit aut facere exercitationem vel reprehenderit ab quibusdam possimus. Enim soluta qui itaque saepe, maiores doloremque aperiam dolorem a?",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam consequuntur quis velit aut facere exercitationem vel reprehenderit ab quibusdam possimus.",
       price: 300,
-      sale: false
     },
     {
       model: "Xiaomi",
-      imgUrl:"Xiaomi.jpg",
+      imgUrl:"xiaomi.jpeg",
       color: "red",
-      descriptions: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam consequuntur quis velit aut facere exercitationem vel reprehenderit ab quibusdam possimus. Enim soluta qui itaque saepe, maiores doloremque aperiam dolorem a?",
+      description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam consequuntur quis velit aut facere exercitationem vel reprehenderit ab quibusdam possimus.",
       price: 400,
-      sale: true
     }
   ];
 
@@ -29,19 +26,16 @@ let html = "";
 
 for (let i=0; i < phone.length; i++) {
     html+=
-    `<div class="card">
-        <img src="${phone[i].imgUrl}" class="card-img-top">
+    `<div class="card" style="width: 18rem">
+        <img src="${phone[i].imgUrl}" height="150" width="100">
         <div class="card-body">
             <h5 class="card-title">${phone[i].model}</h5>
-            <p class="card-text">${phone[i].color}</p>
-            <p class="card-text">${phone[i].description}</p>
-            <a style ="color:red" href="#" class="btn btn-primary">${phone[i].sale}</a>
-            <a style ="color:red" href="#" class="btn btn-primary">${phone[i].sale}</a>
+            <p class="card-text">Color: ${phone[i].color}</p>
+            <p class="card-text">Description: ${phone[i].description}</p>
+            <p class="card-text">Price: ${phone[i].price} USD</p>
+            <a href="#" class="btn btn-primary"> Купить </a>
         </div>
     <div>`;
-
-    html+=phone[i].sale ? `<a href="#" class="btn btn-primary"> Купить </a>` : "";
-
 }
 
 const app = document.getElementById("app");
