@@ -42,8 +42,8 @@ const aboutDrinkGet = document.getElementById("aboutDrinkGet");
 aboutDrinkGet.addEventListener("click", ()=> {
     let drink = prompt("Введите название напитка");
     let drinkInfo = drinkStorage.getValue(drink);
-    // создаем вспомогательную переменную для проверки на наличие инфо о напитке и проверяем на условие наличия значений заданного ключа
-        if (drinkInfo!==undefined) {
+    // создаем вспомогательную переменную для проверки на наличие инфо о напитке и проверяем на условие истинности
+        if (drinkInfo) {
             alert(`
             Напиток: ${drink}
             Содержание алкоголя: ${drinkInfo.isAlco}
