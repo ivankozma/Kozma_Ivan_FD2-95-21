@@ -12,20 +12,26 @@ console.log( wrapP(""Вкусные M&M's"") );
 
 function buildWrapper(value) {
     function wrap(text) {
-        let mnemonics = {
-            '<': '&lt;',
-            '>': '&gt;',
-            '\'': '&apos;',
-            '\"': '&quot;',
-            '\&': '&amp;'
-        };
-
-        for(let i=0; i < text.length; i++){
-            if(text[i] in mnemonics) {
-                text = text.split(text[i]).join(mnemonics[text[i]]);
-            }
+        function changeMnemonic(str){
+            // создаем функцию по замене символов на мнемоники, функции потом используем несколько раз
+            let stringMnemonic = str.replace('<','&lt;').replace('>','&gt;').replace('\'','&apos;').replace('\"','&quot;').replace('\&','&amp;');
+            return stringMnemonic;
         }
+        // let mnemonics = {
+        //     '<': '&lt;',
+        //     '>': '&gt;',
+        //     '\'': '&apos;',
+        //     '\"': '&quot;',
+        //     '\&': '&amp;'
+        // };
 
+        // for(let i=0; i < text.length; i++){
+        //     if(text[i] in mnemonics) {
+        //         text = text.split(text[i]).join(mnemonics[text[i]]);
+        //     }
+        // }
+
+        text = changeMnemonic(text);
         let leftTag = `<${value}>`;
         let rightTag = `</${value}>`;
         return `${leftTag}${text}${rightTag}`;
