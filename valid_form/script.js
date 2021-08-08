@@ -193,7 +193,8 @@ function validDescription(autoFocus) {
     if (descriptionValue =="") {
         descriptionErr.innerHTML = "Опишите свой сайт";
         errCount++;
-    } if (descriptionValue.length<10 && descriptionValue.length>1) {
+   
+    } else if (descriptionValue.length<10 && descriptionValue.length>=1) {
         descriptionErr.innerHTML = "Описание сайта слишком короткое. Должно быть минимум 10 символов";
         errCount++;
     // проверка на количество символов 
