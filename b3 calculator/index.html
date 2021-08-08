@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B3</title>
+    <style>
+        #button1, #button2, #button3, #button4, #button5, #button6,
+        #button7, #button8, #button9, #button0, #buttonDivide,
+        #buttonMultiply, #buttonMinus, #buttonBracketLeft,
+        #buttonBracketRight, #buttonPlus, #buttonDot, #buttonEquality {
+            width: 60px;
+            height: 60px;
+            margin: 5px;
+            background-color: #30dbe0;
+        }
+
+        #buttonReset {
+	        width: 135px;
+	        height: 60px;
+	        margin: 5px;
+            background-color: #30dbe0;
+        }
+
+        #result {
+            display: flex;
+            width: 280px;
+            height: 60px;
+            margin: 5px;
+            border: 2px solid black;
+            background-color: #f1e31f;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+	<div>
+		<input type="button" value="1" id="button1">
+		<input type="button" value="2" id="button2">
+		<input type="button" value="3" id="button3">
+		<input type="button" value="/" id="buttonDivide">
+		<br>
+		<input type="button" value="4" id="button4">
+		<input type="button" value="5" id="button5">
+		<input type="button" value="6" id="button6">
+		<input type="button" value="*" id="buttonMultiply">
+		<br>
+		<input type="button" value="7" id="button7">
+		<input type="button" value="8" id="button8">
+		<input type="button" value="9" id="button9">
+        <input type="button" value="(" id="buttonBracketLeft">
+		<br>
+        <input type="button" value="+" id="buttonPlus">	
+		<input type="button" value="0" id="button0">
+        <input type="button" value="-" id="buttonMinus">
+		<input type="button" value=")" id="buttonBracketRight">
+		<br>
+		<input type="button" value="." id="buttonDot">
+		<input type="button" value="=" id="buttonEquality">
+        <input type="button" value="С" id="buttonReset">
+	</div>
+	<div id="result">
+		<p id="display"></p>
+	</div>
+    <script src="script.js"></script>
+</body>
+</html>
+
