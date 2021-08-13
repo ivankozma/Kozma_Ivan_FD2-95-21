@@ -6,39 +6,44 @@ let x=0;
 let y = 0;
 let direction = null;
 
-let timer;
+
+let timer = setInterval(run, 10);
 
 function run() {
     switch(direction) {
         case "right": {
-            do {
             x++;
             square.style.left = `${x}px`;
-            } while (x > area.offsetWidth-square.offsetWidth-area.offsetLeft);
+            if (x >= area.offsetWidth-square.offsetWidth-area.offsetLeft) {
+                direction = null;
+            }
         };
         break;
 
         case "left": {
-            do {
             x--;
             square.style.left = `${x}px`;
-            } while (x < area.offsetLeft);
+            if (x <= area.offsetLeft) {
+                direction = null;
+            }
         };
         break;
 
         case "down": {
-            do {
             y++;
             square.style.top = `${y}px`;
-           } while (y > area.offsetHeight-square.offseHeight-area.offsetTop);
+            if (y >= area.offsetHeight-square.offsetHeight-area.offsetTop) {
+                direction = null;
+            }
         };
         break;
 
         case "up": {
-            do {
             y--;
             square.style.top = `${y}px`;
-            } while (y < area.offsetTop);
+            if (y <= area.offsetTop) {
+                direction = null;
+            }
         };
         break;
     }
@@ -49,23 +54,12 @@ window.addEventListener("keydown", function(e) {
 // нажимая на стрелку мы вызываем run с соответствующим direction
     
     if(e.code=="ArrowLeft") {
-        clearInterval(timer);
         direction = "left";
-        timer = setInterval(run, 10);
-
     } else if (e.code=="ArrowRight"){
-        clearInterval(timer);
         direction = "right";
-        timer = setInterval(run, 10);
-
     } else if (e.code=="ArrowDown"){
-        clearInterval(timer);
         direction = "down";
-        timer = setInterval(run, 10);
-
     } else if (e.code=="ArrowUp"){
-        clearInterval(timer);
         direction = "up";
-        timer = setInterval(run, 10);
     }
 });
