@@ -16,6 +16,7 @@ function run() {
             square.style.left = `${x}px`;
             if (x >= area.offsetWidth-square.offsetWidth-area.offsetLeft) {
                 direction = null;
+            // здесь и далее сбрасываем направление при достижении краев блока
             }
         };
         break;
