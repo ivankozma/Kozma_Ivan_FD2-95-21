@@ -22,7 +22,7 @@ minute.style.height = `${clockRadius*0.04}px`;
 clockCircle.appendChild(minute);
 
 let second = document.createElement('div');
-second.style.cssText = `position: absolute; background-color: #1937dd; transform-origin: left center; left:${centerX}px; top:${centerY}px;`;
+second.style.cssText = `position: absolute; background-color: #1937dd; transform-origin: left center; left:${centerX}px; top:${centerY}px; z-index:2;`;
 second.style.width = `${clockRadius*0.85}px`;
 second.style.height = `${clockRadius*0.02}px`;
 clockCircle.appendChild(second);
