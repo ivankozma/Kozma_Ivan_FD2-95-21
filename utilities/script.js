@@ -31,3 +31,57 @@
 //   return Math.floor(Math.random() * (m-n+1)) + n;
 // }
 
+// ***DOM
+
+// // *функция кроссбраузерного добавления стилевого правила в стилевую таблицу 
+
+// function addCSSRule(sheet, selector, rules, index) {
+//     if ( 'insertRule' in sheet )
+//       sheet.insertRule(selector+'{'+rules+'}',index);
+//     else if( 'addRule' in sheet )
+//       sheet.addRule(selector,rules,index);
+// }
+
+// addCSSRule( document.styleSheets[0],
+//     'div.SSS1', 'float: left; margin: 0;');
+
+
+// // *проверка медиаусловия
+// let mq=window.matchMedia('(orientation: portrait)');
+// if ( mq.matches )
+//    // ориентация устройства - портретная
+// else
+//    // ориентация устройства - ландшафтная
+// Можно подписаться на событие изменения значения медиаусловия — mq.addListener(f) 
+// или отписаться — mq.removeListener(f). Функция f при вызове получит в качестве аргумента
+// всё то же медиаусловие (в данном случае mq) и сможет проверить его истинность (mq.matches).
+
+// *функция прокрутки до элемента на странице
+// function getElementPos(elem) {
+//     var bbox=elem.getBoundingClientRect();
+//     return {
+//       left: bbox.left+window.pageXOffset,
+//       top: bbox.top+window.pageYOffset
+//     };
+//   }
+// // то же, кроссбраузерный вариант (в т.ч. для IE8-)
+// function getElementPos(elem) {
+//     var bbox=elem.getBoundingClientRect();
+
+//     var body=document.body;
+//     var docEl=document.documentElement;
+
+//     var scrollTop=window.pageYOffset||docEl.scrollTop||body.scrollTop;
+//     var scrollLeft=window.pageXOffset||docEl.scrollLeft||body.scrollLeft;
+
+//     var clientTop=docEl.clientTop||body.clientTop||0;
+//     var clientLeft=docEl.clientLeft||body.clientLeft||0;
+
+//     var top=bbox.top+scrollTop-clientTop;
+//     var left=bbox.left+scrollLeft-clientLeft;
+
+//     return {
+//         left: left,
+//         top: top
+//     };
+// }
