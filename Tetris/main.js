@@ -694,7 +694,7 @@ let stringName='KOZMA_IVAN_TETRIS';
 // const createPlayer = document.getElementById("btnSubmitForm");
 
 function createPlayer () {
-  playerInfo(infoPlayer);
+  playerInfo();
   readFromServer();
 
   if (firstName.value!=""){
