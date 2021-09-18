@@ -443,7 +443,7 @@ function eventControl() {
 
   // функции обработки событий клика по кнопкам управления
   function funcLeft(event) {
-    vibro(false); // виброотклик
+    vibro(true); // виброотклик
     event.preventDefault();
     let p = moves[KEY.LEFT](board.piece);
     if (board.valid(p)) {
@@ -452,7 +452,7 @@ function eventControl() {
   }
 
   function funcRight(event) {
-    vibro(false);
+    vibro(true);
     event.preventDefault();
     let p = moves[KEY.RIGHT](board.piece);
     if (board.valid(p)) {
@@ -461,7 +461,7 @@ function eventControl() {
   }
 
   function funcRotate(event) {
-    vibro(false);
+    vibro(true);
     event.preventDefault();
     let p = moves[KEY.UP](board.piece);
     if (board.valid(p)) {
@@ -470,7 +470,7 @@ function eventControl() {
   }
 
   function funcDown(event) {
-    vibro(false);
+    vibro(true);
     event.preventDefault();
     let p = moves[KEY.DOWN](board.piece);
     if (board.valid(p)) {
@@ -480,7 +480,7 @@ function eventControl() {
   }
 
   function funcDrop(event) {
-    vibro(false);
+    vibro(true);
     event.preventDefault();
     let p = moves[KEY.SPACE](board.piece);
     while (board.valid(p)) {
@@ -717,8 +717,6 @@ function createPlayer () {
 
 
 function skipPlayer() {
-
-  // if (firstName.value!=""){
     const btnPlay = document.getElementById("btnPlay");
     btnPlay.classList.remove("hidden");
 
@@ -728,35 +726,7 @@ function skipPlayer() {
     const formGroup = document.getElementById("formGroup");
     formGroup.classList.add("hidden");
     formGroup.classList.remove("form-group");
-  // } 
-  // const userName = document.getElementById("userName");
-  // userName.classList.remove("hidden");
-  // userName.classList.add("user_name");
-  // let text = firstName.value
-  // userName.textContent = text;
 };
-
-// createPlayer.addEventListener("click", ()=> {
-//     playerInfo(infoPlayer);
-//     readFromServer();
-
-//     if (firstName.value!=""){
-//       const btnPlay = document.getElementById("btnPlay");
-//       btnPlay.classList.remove("hidden");
-
-//       const buttonControl = document.getElementById("buttonControl");
-//       buttonControl.classList.add("hidden");
-
-//       const formGroup = document.getElementById("formGroup");
-//       formGroup.classList.add("hidden");
-//       formGroup.classList.remove("form-group");
-//     } 
-//     const userName = document.getElementById("userName");
-//     userName.classList.remove("hidden");
-//     userName.classList.add("user_name");
-//     let text = firstName.value
-//     userName.textContent = text;
-// });
 
 
 // переход в игровое поле
