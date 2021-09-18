@@ -691,29 +691,52 @@ let stringName='KOZMA_IVAN_TETRIS';
 
 
 // добавляем имя игрока в блок с именем, меняем состояние странице и убираем форму
-const createPlayer = document.getElementById("btnSubmitForm");
+// const createPlayer = document.getElementById("btnSubmitForm");
 
-createPlayer.addEventListener("click", ()=> {
-    playerInfo(infoPlayer);
-    readFromServer();
+function createPlayer () {
+  playerInfo(infoPlayer);
+  readFromServer();
 
-    if (firstName.value!=""){
-      const btnPlay = document.getElementById("btnPlay");
-      btnPlay.classList.remove("hidden");
+  if (firstName.value!=""){
+    const btnPlay = document.getElementById("btnPlay");
+    btnPlay.classList.remove("hidden");
 
-      const buttonControl = document.getElementById("buttonControl");
-      buttonControl.classList.add("hidden");
+    const buttonControl = document.getElementById("buttonControl");
+    buttonControl.classList.add("hidden");
 
-      const formGroup = document.getElementById("formGroup");
-      formGroup.classList.add("hidden");
-      formGroup.classList.remove("form-group");
-    } 
-    const userName = document.getElementById("userName");
-    userName.classList.remove("hidden");
-    userName.classList.add("user_name");
-    let text = firstName.value
-    userName.textContent = text;
-});
+    const formGroup = document.getElementById("formGroup");
+    formGroup.classList.add("hidden");
+    formGroup.classList.remove("form-group");
+  } 
+  const userName = document.getElementById("userName");
+  userName.classList.remove("hidden");
+  userName.classList.add("user_name");
+  let text = firstName.value
+  userName.textContent = text;
+};
+
+
+// createPlayer.addEventListener("click", ()=> {
+//     playerInfo(infoPlayer);
+//     readFromServer();
+
+//     if (firstName.value!=""){
+//       const btnPlay = document.getElementById("btnPlay");
+//       btnPlay.classList.remove("hidden");
+
+//       const buttonControl = document.getElementById("buttonControl");
+//       buttonControl.classList.add("hidden");
+
+//       const formGroup = document.getElementById("formGroup");
+//       formGroup.classList.add("hidden");
+//       formGroup.classList.remove("form-group");
+//     } 
+//     const userName = document.getElementById("userName");
+//     userName.classList.remove("hidden");
+//     userName.classList.add("user_name");
+//     let text = firstName.value
+//     userName.textContent = text;
+// });
 
 
 // переход в игровое поле

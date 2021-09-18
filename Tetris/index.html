@@ -29,7 +29,7 @@
       Темп игры постепенно ускоряется. Игра заканчивается, когда новая фигурка не может поместиться 
       в игровое поле. <br> Игрок получает очки за каждый заполненный ряд и за самостоятельный сброс фигурки.</p>
     </div>
-    <button onclick="showProfileForm()" class="continue-button" id='buttonPlay'>Play</button>
+    <button onclick = "showProfileForm()" class="continue-button" id='buttonPlay'>Play</button>
   </div>
 
 <!-- Вторая часть: пользователь-->
@@ -40,7 +40,7 @@
         <input type="text" id = "firstName" name="firstName" required>
       </div>
        <div id="buttonControl">
-        <button id="btnSubmitForm" class="continue-button" type="submit">Create profile</button>
+        <button onclick = "createPlayer()" id="btnSubmitForm" class="continue-button" type="submit">Create profile</button>
       </div>
       <div id = "btnPlay" class="hidden">
         <button id="goToPlay" class="continue-button" type="submit">Go to Play</button>
