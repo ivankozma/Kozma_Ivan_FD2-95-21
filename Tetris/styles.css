@@ -456,48 +456,48 @@
   }
   
   .up {
-    color: #e74c3c;
-    border: solid 2px #e74c3c;
+    color: #e9d843;
+    border: solid 2px #7f8c8d;
   }
   .up:active {
-    box-shadow: inset 0 -3em #e74c3c;
-    color: whitesmoke;
+    box-shadow: inset 0 -3em #7f8c8d;
+    color: #e9d843;
   }
   
   .left {
-    color: #f1c40f;
-    border: solid 2px #f1c40f;
+    color: #e9d843;
+    border: solid 2px #7f8c8d;
   }
   .left:active {
-    box-shadow: inset -10em 0 #f1c40f;
-    color: whitesmoke;
+    box-shadow: inset -10em 0 #7f8c8d;
+    color: #e9d843;
   }
   
   .center {
-    color: #7f8c8d;
+    color: #e9d843;
     border: solid 2px #7f8c8d;
   }
   .center:active {
     box-shadow: inset 0 0 0 2em #7f8c8d;
-    color: whitesmoke;
+    color: #e9d843;
   }
   
   .right {
-    color: #3498db;
-    border: solid 2px #3498db;
+    color: #e9d843;
+    border: solid 2px #7f8c8d;
   }
   .right:active {
-    box-shadow: inset 10em 0 #3498db;
-    color: whitesmoke;
+    box-shadow: inset 10em 0 #7f8c8d;
+    color: #e9d843;
   }
   
   .down {
-    color: #27ae60;
-    border: solid 2px #2ecc71;
+    color: #e9d843;
+    border: solid 2px #7f8c8d;
   }
   .down:active {
-    box-shadow: inset 0 3em #2ecc71;
-    color: whitesmoke;
+    box-shadow: inset 0 3em #7f8c8d;
+    color: #e9d843;
   }
   /*КОНЕЦ Кнопки для мобильных*/
   
