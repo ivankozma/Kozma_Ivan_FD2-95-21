@@ -551,8 +551,9 @@ function gameOver() {
   cancelAnimationFrame(requestId);
   audioGame.pause(); // пауза звука игры
   audioGameOver.play(); // звук game over
-  TODO:vibro(true); // многократная вибрация
-  // рисуем табличку GAME OVER c количеством очков
+  navigator.vibrate(1000);
+  // TODO:vibro(true); // многократная вибрация
+  // // рисуем табличку GAME OVER c количеством очков
   ctx.fillStyle = 'DarkGrey'; 
   ctx.fillRect(1, 3, 8, 3);
   ctx.font = '1px Arial';
@@ -594,6 +595,8 @@ function toggleSound() {
 function rules() {
   var gameRules = document.querySelector('.game-rules');
   gameRules.style.top = '25vmin';
+
+  navigator.vibrate(500);
   
   document.querySelector('.continue-button-rule').addEventListener('click', event => {
     gameRules.style.top = '-100vmax';
