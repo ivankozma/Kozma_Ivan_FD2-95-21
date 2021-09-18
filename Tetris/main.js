@@ -597,10 +597,11 @@ function rules() {
   gameRules.style.top = '25vmin';
 
   navigator.vibrate(500);
-  
-  document.querySelector('.continue-button-rule').addEventListener('click', event => {
-    gameRules.style.top = '-100vmax';
-  })
+}
+
+function showRules() {
+  var gameRules = document.querySelector('.game-rules');
+  gameRules.style.top = '-100vmax';
 }
 
 // анимация для кнопок 
