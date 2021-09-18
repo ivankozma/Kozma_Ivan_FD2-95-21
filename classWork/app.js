@@ -14,10 +14,66 @@ function getValue() {
     phones.push(phone);
 }
 
+
+let info={
+    brand : document.getElementById("brand").value,
+    model : document.getElementById("model").value,
+    price : document.getElementById("price").value,
+}; 
+
+
+
 const add = document.getElementById("add");
 add.addEventListener("click", ()=> {
     getValue();
 });
+
+const createItem = document.getElementById("create");
+createItem.addEventListener("click", ()=> {
+    phoneInfo(info);
+});
+
+
+let ajaxHandlerScript="https://fe.it-academy.by/AjaxStringStorage2.php";
+let updatePassword;
+let stringName='KOZMA_IVAN';
+
+
+function phoneInfo(info) {
+    $.ajax( {
+            url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+            data : { f : 'INSERT', n : stringName, v: JSON.stringify(info)},
+            success : lockGetReady, error : err
+        }
+    );
+}
+
+function err ( ) {
+    console.log('1')
+}
+
+function updateReady ( ) {
+    console.log('2')
+}
+
+function lockGetReady(callresult) {
+    if ( callresult.error!=undefined )
+        alert(callresult.error);
+    else {
+
+        $.ajax( {
+                url : ajaxHandlerScript, type : 'POST', cache : false, dataType:'json',
+                data : { f : 'UPDATE', n : stringName, v : JSON.stringify(info), p : updatePassword },
+                success : updateReady, error : err
+            }
+        );
+    }
+function errorHandler(jqXHR,statusStr,errorStr) {
+        alert(statusStr+' '+errorStr);
+    }
+
+
+
 
 const app = document.getElementById("app");
 const basket = document.getElementById("basket");
@@ -101,4 +157,4 @@ rend.addEventListener("click", ()=> {
 //     const app = document.getElementById("app");
 //     app.innerHTML = html;
 //     }
-
+}
