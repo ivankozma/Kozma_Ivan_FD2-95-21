@@ -153,8 +153,8 @@
   #buttonPlay {
     width: 200px;
     position: relative;
-    left: 47%;
-    transform: translate(-50%, 0);
+    /* left: 47%;
+    transform: translate(-50%, 0); */
   }
 
   #btnSkip {
@@ -378,6 +378,15 @@
       width: 75px;
       display: flex;
       justify-content: center;
+    }
+
+    .continue-button-rule {
+      display: inline-block;
+      align-items: center;
+      width: 75px;
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
       left: 45%;
     }
 
@@ -509,6 +518,7 @@
   #close-rules {
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 50vw;
     position: absolute;
     top: -100vmax;
@@ -526,6 +536,7 @@
     margin-top: 100px;
     width: 100%;
     text-align: center;
+    align-items: center;
     font-size: 30px;
     color: #000000;
     border-radius: 2em;
