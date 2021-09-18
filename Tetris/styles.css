@@ -157,6 +157,10 @@
     transform: translate(-50%, 0);
   }
 
+  #btnSkip {
+    display: none;
+  }
+
   .play-button:hover, .pause-button:hover, .rules-button:hover, .continue-button:hover {
     box-shadow: 0 0 0 0 rgba(56, 14, 206, 0);
     background-position: 20% 20%;
@@ -374,6 +378,10 @@
       width: 75px;
       display: flex;
       justify-content: center;
+    }
+
+    #btnSkip {
+      display: block;
     }
 
     .left-column div p, .play-button, .pause-button {
