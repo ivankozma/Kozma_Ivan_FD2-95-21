@@ -135,7 +135,7 @@ class Piece {
   }
 
   spawn() {
-    this.typeId = this.randomPieceType(colors.length - 1); // слуяайным образом выбирается фигура
+    this.typeId = this.randomPieceType(colors.length - 1); // случайным образом выбирается фигура
     this.shape = shapes[this.typeId]; // форма фигуры
     this.color = colors[this.typeId]; // ее цвет
     this.x = 0; // начальное положение
@@ -410,7 +410,7 @@ function eventControl() {
   document.getElementById('down_button').addEventListener('click', funcDown, false);
   document.getElementById('drop_button').addEventListener('click', funcDrop, false);
 
-  // функция обработки соытий на клавиатуре
+  // функция обработки событий на клавиатуре
   function eventKeyboard(event) {
     // если нажата кликнута клавиша 'p'
     if (event.keyCode === KEY.P) {
@@ -419,7 +419,7 @@ function eventControl() {
     // если ESC
     if (event.keyCode === KEY.ESC) {
       gameOver();
-      // если клик клавиши, у которой код равен ключу из хэша moves
+      // если клик клавиши, у которой код равен ключу из объекта moves
     } else if (moves[event.keyCode]) {
       event.preventDefault();
       // новое состояние фигуры тетриса
@@ -722,7 +722,7 @@ function createPlayer () {
 
 function skipPlayer () {
 
-  // if (firstName.value!=""){
+
     const btnPlay = document.getElementById("btnPlay");
     btnPlay.classList.remove("hidden");
 
@@ -732,36 +732,8 @@ function skipPlayer () {
     const formGroup = document.getElementById("formGroup");
     formGroup.classList.add("hidden");
     formGroup.classList.remove("form-group");
-  // } 
-  // const userName = document.getElementById("userName");
-  // userName.classList.remove("hidden");
-  // userName.classList.add("user_name");
-  // let text = firstName.value
-  // userName.textContent = text;
+
 };
-
-// createPlayer.addEventListener("click", ()=> {
-//     playerInfo(infoPlayer);
-//     readFromServer();
-
-//     if (firstName.value!=""){
-//       const btnPlay = document.getElementById("btnPlay");
-//       btnPlay.classList.remove("hidden");
-
-//       const buttonControl = document.getElementById("buttonControl");
-//       buttonControl.classList.add("hidden");
-
-//       const formGroup = document.getElementById("formGroup");
-//       formGroup.classList.add("hidden");
-//       formGroup.classList.remove("form-group");
-//     } 
-//     const userName = document.getElementById("userName");
-//     userName.classList.remove("hidden");
-//     userName.classList.add("user_name");
-//     let text = firstName.value
-//     userName.textContent = text;
-// });
-
 
 // переход в игровое поле
 const goToPlay = document.getElementById("goToPlay");
