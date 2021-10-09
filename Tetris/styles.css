@@ -396,7 +396,6 @@
 
     .left-column div p, .play-button, .pause-button {
       font-size: 16px;
-
     }
   
     .rules-button, .sound-button {
@@ -428,7 +427,6 @@
     .neon {
       display: none;
     }
-    
   }
 
    /*создается в animbutton.js*/

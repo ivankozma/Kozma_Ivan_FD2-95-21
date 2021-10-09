@@ -372,7 +372,6 @@ function updateAccount(key, value) {
   }
 }
 
-
 let account = new Proxy(accountValues, {
   set: (target, key, value) => {
     target[key] = value;
@@ -528,7 +527,6 @@ function play() {
   animate();
   
 }
-
 // В игровом цикле мы обновляем наше игровое состояние на основе временного интервала, а затем выводим результат.
 function animate(now = 0) {
   // обновление времени
